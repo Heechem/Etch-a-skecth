@@ -9,6 +9,7 @@ const clearEl = document.getElementById("clear");
 const increaseEl = document.getElementById("increase");
 const decreaseEl = document.getElementById("decrease");
 const resizeEl = document.getElementById("resize");
+const eraserEl = document.getElementById("grid-less");
 
 // the variables
 
@@ -30,9 +31,17 @@ function makeRows(rows, cols) {
   for (c = 0; c < rows * cols; c++) {
     let cell = document.createElement("div");
 
-    container.appendChild(cell).className = "grid_item";
+    container.appendChild(cell).className = "grid_item borders";
 
     let grids = container.childNodes;
+
+    eraserEl.addEventListener("click", () => {
+      grids.forEach((el) => {
+        if (el.classList.contains("borders")) {
+          el.classList.toggle("borders");
+        }
+      });
+    });
 
     // the clearing function
 
@@ -41,15 +50,21 @@ function makeRows(rows, cols) {
         if (element.className === "grid_item") {
           element.style.background = "";
         }
+        color = "black";
       });
     });
   }
+
+  // border grid function
+
   container.addEventListener("mousemove", (e) => {
     container.style.cursor = "crosshair";
 
     e.target.style.backgroundColor = color;
   });
 }
+
+//create the rows
 
 makeRows(gridRows, gridCols);
 sizeEl.innerHTML = `${gridCols}:${gridRows}`;
@@ -99,6 +114,7 @@ decreaseEl.addEventListener("click", () => {
   sizeEl.innerHTML = `${gridCols}:${gridRows}`;
 });
 
+// Resize the grid
 resizeEl.addEventListener("click", () => {
   container.innerHTML = "";
   gridRows = 16;
