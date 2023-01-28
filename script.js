@@ -39,7 +39,7 @@ function makeRows(rows, cols) {
     clearEl.addEventListener("click", () => {
       grids.forEach((element) => {
         if (element.className === "grid_item") {
-          element.style.backgroundColor = "";
+          element.style.background = "";
         }
       });
     });

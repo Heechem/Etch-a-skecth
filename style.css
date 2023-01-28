@@ -7,6 +7,7 @@
 }
 
 body {
+  background-color: #ddd;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,13 +18,7 @@ body {
 
 .header {
   margin: 2rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
   width: 100%;
-
   padding: 2rem;
   position: relative;
 }
@@ -34,7 +29,6 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-
   color: #111;
   line-height: 1.2;
   width: 100%;
@@ -52,9 +46,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  max-width: 900;
-  max-height: 700;
+  flex: 0;
+  max-width: 1000px;
+  max-height: 900px;
 }
 
 .toolbox {
@@ -79,6 +73,9 @@ h1 {
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   /* border: 1px solid #111; */
+
+  flex-grow: 0;
+  flex-basis: 50%;
 }
 
 .grid_item {
@@ -122,12 +119,13 @@ button#resize {
 }
 
 span {
-  color: white;
+  color: #111;
   text-align: center;
   font-size: 1.25rem;
   border: 1px solid #eee;
   padding: 1rem;
   border-radius: 25px;
+  background-color: #eee;
 }
 
 /* input[type="color"] {
