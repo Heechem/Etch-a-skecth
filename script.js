@@ -31,17 +31,17 @@ function makeRows(rows, cols) {
   for (c = 0; c < rows * cols; c++) {
     let cell = document.createElement("div");
 
-    container.appendChild(cell).className = "grid_item borders";
+    container.appendChild(cell).className = "grid_item";
 
     let grids = container.childNodes;
 
-    eraserEl.addEventListener("click", () => {
-      grids.forEach((el) => {
-        if (el.classList.contains("borders")) {
-          el.classList.toggle("borders");
-        }
-      });
-    });
+    // eraserEl.addEventListener("click", () => {
+    //   grids.forEach((el) => {
+    //     if (el.classList.contains("borders")) {
+    //       el.classList.toggle("borders");
+    //     }
+    //   });
+    // });
 
     // the clearing function
 
