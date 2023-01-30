@@ -109,6 +109,8 @@ body {
 
   flex-grow: 0;
   flex-basis: 50%;
+  max-height: 70vh;
+  max-width: 80vw;
 }
 
 .grid_item {
@@ -124,23 +126,6 @@ body {
 #canvas {
   position: absolute;
 }
-
-/* .grid-item:hover {
-  cursor: crosshair;
-  background-color: black;
-} */
-
-/* button {
-  font-size: 1.25rem;
-  border-radius: 25px;
-  cursor: pointer;
-  height: 50px;
-  width: 65px;
-}
-
-button:hover {
-  scale: 1.1;
-} */
 
 button#clear,
 button#resize {
@@ -161,18 +146,6 @@ span {
   background-color: #eee;
 }
 
-/* input[type="color"] {
-  -webkit-appearance: none;
-  width: 80px;
-  height: 80px;
-  border: none;
-}
-
-input::-webkit-color-swatch {
-  border: none;
-  border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} */
 input[type="color"] {
   width: 80px;
   height: 80px;

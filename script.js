@@ -9,7 +9,6 @@ const clearEl = document.getElementById("clear");
 const increaseEl = document.getElementById("increase");
 const decreaseEl = document.getElementById("decrease");
 const resizeEl = document.getElementById("resize");
-const eraserEl = document.getElementById("grid-less");
 
 // the variables
 
@@ -35,14 +34,6 @@ function makeRows(rows, cols) {
 
     let grids = container.childNodes;
 
-    // eraserEl.addEventListener("click", () => {
-    //   grids.forEach((el) => {
-    //     if (el.classList.contains("borders")) {
-    //       el.classList.toggle("borders");
-    //     }
-    //   });
-    // });
-
     // the clearing function
 
     clearEl.addEventListener("click", () => {
@@ -50,7 +41,7 @@ function makeRows(rows, cols) {
         if (element.className === "grid_item") {
           element.style.background = "";
         }
-        color = "black";
+        // color = "black";
       });
     });
   }
